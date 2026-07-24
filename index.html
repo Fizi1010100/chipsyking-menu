@@ -8,8 +8,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --yellow:#FFC72C;
-    --yellow-deep:#F5A800;
+    --yellow:#FFD200;
+    --yellow-deep:#E8B400;
+    --orange:#E8720C;
+    --orange-deep:#C85F08;
     --ink:#1A1611;
     --char:#2B2620;
     --paper:#FFF9EC;
@@ -24,8 +26,7 @@
     color:var(--ink);
     font-family:'Inter',sans-serif;
     -webkit-font-smoothing:antialiased;
-    background:
-      repeating-linear-gradient(135deg, #000 0px, #000 2px, #171310 2px, #171310 26px);
+    background:var(--orange-deep);
   }
   ::selection{background:var(--yellow); color:var(--ink);}
 
@@ -52,8 +53,8 @@
       flex-direction:column;
       align-items:center;
       justify-content:space-evenly;
-      color:var(--yellow);
-      opacity:.45;
+      color:#FFFFFF;
+      opacity:.5;
       font-family:'Anton',sans-serif;
       font-size:22px;
       letter-spacing:3px;
@@ -68,39 +69,38 @@
 
   /* ---- Header / Hero ---- */
   .hero{
-    background:
-      radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 40%),
-      repeating-linear-gradient(135deg, #000 0px, #000 2px, transparent 2px, transparent 14px),
-      var(--ink);
-    color:var(--yellow);
+    background:var(--orange);
+    color:#FFFFFF;
     padding:38px 20px 26px;
     text-align:center;
     position:relative;
     border-bottom:6px solid var(--yellow);
   }
-  .hero .crown{font-size:26px; letter-spacing:2px; display:block; margin-bottom:4px; opacity:.85;}
+  .hero .crown{font-size:26px; letter-spacing:2px; display:block; margin-bottom:4px; opacity:.9; color:#FFFFFF;}
   .hero h1{
     font-family:'Anton',sans-serif;
     font-size:clamp(38px, 11vw, 64px);
     margin:0;
     line-height:0.9;
     letter-spacing:1px;
-    text-shadow: 3px 3px 0 rgba(0,0,0,0.35);
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
   }
+  .hero h1 .c1{ color:var(--yellow); }
+  .hero h1 .c2{ color:#FFFFFF; }
   .hero .tag{
     font-size:12px;
     letter-spacing:4px;
     text-transform:uppercase;
-    color:var(--cream);
+    color:#FFFFFF;
     margin-top:10px;
     font-weight:600;
-    opacity:.8;
+    opacity:.85;
   }
 
   /* ---- Sticky category nav ---- */
   .navwrap{
     position:sticky; top:0; z-index:50;
-    background:var(--ink);
+    background:#FFFFFF;
     border-bottom:2px solid var(--yellow-deep);
   }
   nav.cats{
@@ -113,14 +113,14 @@
   nav.cats::-webkit-scrollbar{display:none;}
   nav.cats a{
     flex:0 0 auto;
-    color:var(--yellow);
+    color:var(--char);
     text-decoration:none;
     font-weight:700;
     font-size:12.5px;
     letter-spacing:0.5px;
     text-transform:uppercase;
     padding:8px 14px;
-    border:1.5px solid var(--yellow-deep);
+    border:1.5px solid var(--orange);
     border-radius:999px;
     white-space:nowrap;
     transition:background .15s, color .15s;
@@ -269,7 +269,7 @@
 
 <header class="hero">
   <span class="crown">♛</span>
-  <h1>CHIPSY KING</h1>
+  <h1><span class="c1">CHIPSY</span> <span class="c2">KING</span></h1>
   <div class="tag">Full Menu · Dine In &amp; Takeaway</div>
 </header>
 
